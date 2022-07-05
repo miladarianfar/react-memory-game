@@ -54,6 +54,10 @@ function App() {
         }
     }, [choiceOne, choiceTwo])
 
+    useEffect(() => {
+        shuffleCards();
+    }, [])
+
   return (
     <div className="App">
       <h1>Magic game</h1>
@@ -68,6 +72,7 @@ function App() {
               />
           ))}
       </div>
+      <p>Turns : {turns}</p>
     </div>
   );
 }
